@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultar Estado de Envío - PacketWorld</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Consultar estado de envío</h1>
+        <div class="search-container">
+            <input type="text" id="guiaInput" placeholder="Número de guía">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+    </header>
+
+    <main id="resultadoContainer" class="hidden">
+        <div class="card">
+            <section id="datosEnvio">
+                <h2>
+                    Datos del Envío
+                </h2>
+                
+                <div id="infoEnvio"></div>
+            </section>
+
+            <section id="paquetesEnvio">
+                <h2>
+                    Paquetes que contiene
+                </h2>
+                <ul id="listaPaquetes"></ul>
+            </section>
+
+            <section id="historialEstatus">
+                <h2>
+                    Historial de Estatus
+                </h2>
+                <table id="tablaHistorial">
+                    <thead>
+                        <tr>
+                            <th>
+                                Estatus
+                            </th>
+                            <th>
+                                Fecha
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody 
+                        id="cuerpoHistorial">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
